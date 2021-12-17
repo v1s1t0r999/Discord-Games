@@ -45,7 +45,7 @@ class Tictactoe:
     async def make_embed(self) -> discord.Embed:
         embed = discord.Embed()
         if not await self.GameOver():
-            embed.description = f"**Turn:** {self.turn.name}\n**Piece:** `{self._PlayerToEmoji[self.turn]}`"
+            embed.description = f"**Turn:** {self.turn}\n**Piece:** `{self._PlayerToEmoji[self.turn]}`"
         else:
             status = f"{self.winner} won!" if self.winner else "Tie"
             embed.description = f"**Game over**\n{status}"
